@@ -25,7 +25,7 @@ def send_estimate_time(estimate_time):
 
 
 def send_result(result):
-    return f"data: {json.dumps({'type': 'result', 'result': result})}\n\n"
+    return f"data: {json.dumps({'type': 'result','success':True, 'result': result})}\n\n"
 
 
 @app.route('/')
