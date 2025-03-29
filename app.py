@@ -20,8 +20,8 @@ app.config['MAX_CONTENT_LENGTH'] = 1000 * 1024 * 1024  # 100MB max file size
 app.config['MAX_CONTENT_PATH'] = 255  # Maximum length of file path
 
 
-def send_progress_update(stage, percentage):
-    return f"data: {json.dumps({'type': 'progress', 'stage': stage, 'percentage': percentage})}\n\n"
+def send_estimate_time(estimate_time):
+    return f"data: {json.dumps({'type': 'estimate', 'estimate_time': estimate_time})}\n\n"
 
 
 def send_result(result):
@@ -90,29 +90,17 @@ def upload_file():
 
         def generate():
             try:
-                # Send upload progress
-                yield send_progress_update('upload', 20)
-                time.sleep(1)
-
+                estimate_time = 2 * (
+                    create_predict_data.split_number(filepath) - 1
+                ) if create_predict_data.split_number(filepath) >= 2 else 3
+                yield send_estimate_time(estimate_time)
                 # Process audio file
-                yield send_progress_update('splitting', 30)
                 features_df = create_predict_data.process_audio_files(filepath)
-                time.sleep(2)
 
-                yield send_progress_update('resampling', 50)
-                time.sleep(2)
-
-                yield send_progress_update('feature_extraction', 70)
-                time.sleep(2)
-
-                # Make prediction
-                yield send_progress_update('analysis', 90)
-                time.sleep(1)
                 result = predict.predict_adhd(features_df)
                 print(result)
 
-                # Send final result
-                yield send_result(result)
+                yield send_result(result, True)
 
             except Exception as e:
                 yield send_result({
