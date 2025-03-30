@@ -108,7 +108,7 @@ EMOVOCAL is a sophisticated Flask-based web application that performs real-time 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/EMOVOCAL.git
+git clone https://github.com/Phoenix-ryan-1111/ADHD_classification.git
 cd EMOVOCAL
 ```
 
