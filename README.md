@@ -139,6 +139,11 @@ python app.py
 2. Access the web interface:
 
 ```
+https://127.0.0.1:5000
+```
+Or
+
+```
 https://truthful-miracle-production.up.railway.app/
 ```
 
